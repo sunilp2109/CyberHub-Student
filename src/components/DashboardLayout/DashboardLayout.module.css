@@ -1,0 +1,13 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background: #F4F7FA;
+}
+
+.main {
+  flex: 1;
+  margin-left: 210px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #F4F7FA;
+}

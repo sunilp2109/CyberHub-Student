@@ -1,0 +1,315 @@
+/* ── Top bar ── */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E8EEF4;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  gap: 16px;
+}
+
+.pageTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0D1F3C;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+/* Search */
+.searchWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.searchInput {
+  padding: 7px 14px 7px 30px;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  color: #0D1F3C;
+  background: #F8FAFC;
+  width: 210px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.searchInput:focus {
+  border-color: #29B5D5;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(41, 181, 213, 0.1);
+}
+.searchInput::placeholder { color: #A8BCCC; }
+
+/* Icon buttons */
+.iconBtn {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.iconBtn:hover {
+  background: #E8F7FB;
+  border-color: #29B5D5;
+  color: #29B5D5;
+}
+
+.notifDot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  background: #EF4444;
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+
+/* ── Content ── */
+.content {
+  padding: 28px;
+}
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0D1F3C;
+  margin-bottom: 4px;
+}
+
+.sectionSub {
+  font-size: 0.8125rem;
+  color: #94A3B8;
+}
+
+.sectionActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Add New button */
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: #0D1F3C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+.addBtn:hover {
+  background: #162d52;
+  box-shadow: 0 4px 12px rgba(13, 31, 60, 0.25);
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* Filter / Sort buttons */
+.filterBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filterBtn:hover {
+  background: #F0FAFB;
+  border-color: #29B5D5;
+  color: #29B5D5;
+}
+
+/* ── Cards grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ── Certificate Card ── */
+.card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #E8EEF4;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(13, 31, 60, 0.06);
+  transition: all 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(13, 31, 60, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Colored top strip */
+.cardStrip {
+  height: 7px;
+  width: 100%;
+}
+
+/* Card body */
+.cardBody {
+  padding: 18px 18px 20px;
+}
+
+/* Icon + badge row */
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #E8EEF4;
+}
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.badgeVerified {
+  background: #E6F7FA;
+  color: #0D9EBB;
+}
+
+.badgePending {
+  background: #F1F5F9;
+  color: #64748B;
+}
+
+.badgeExpired {
+  background: #FEF2F2;
+  color: #DC2626;
+}
+
+/* ── Card content ── */
+.certTitle {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0D1F3C;
+  line-height: 1.35;
+  margin-bottom: 5px;
+}
+
+.certIssuer {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* Meta */
+.metaList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 14px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.metaIcon {
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.metaLabel {
+  font-size: 0.775rem;
+  color: #64748B;
+  flex: 1;
+}
+
+.metaValue {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: #0D1F3C;
+  text-align: right;
+}
+
+.metaPending {
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+/* ── Empty state ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  color: #94A3B8;
+  gap: 12px;
+  font-size: 0.875rem;
+}

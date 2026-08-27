@@ -1,0 +1,110 @@
+.header {
+  height: var(--header-height);
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-xs);
+}
+
+.left { display: flex; flex-direction: column; gap: 2px; }
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0D1F3C;
+  line-height: 1.2;
+}
+
+.subtitle { font-size: 0.8rem; color: var(--text-muted); }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.searchWrap { position: relative; display: flex; align-items: center; }
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  padding: 8px 14px 8px 32px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+  background: var(--gray-50);
+  width: 210px;
+  outline: none;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+.searchInput:focus {
+  border-color: #29B5D5;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(41, 181, 213, 0.1);
+  width: 250px;
+}
+.searchInput::placeholder { color: var(--text-muted); }
+
+.iconBtn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--gray-50);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+.iconBtn:hover {
+  background: #E8F7FB;
+  border-color: #29B5D5;
+  color: #29B5D5;
+}
+
+.notifDot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  background: var(--error);
+  border-radius: var(--radius-full);
+  border: 1.5px solid white;
+}
+
+.actions { display: flex; align-items: center; gap: 8px; }
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  background: #0D1F3C;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
